@@ -9,19 +9,19 @@ def test_single_five():
     expected = 50
     assert actual == expected
 
-@pytest.mark.skip('Pending')
+# @pytest.mark.skip('Pending')
 def test_single_one():
     actual = GameLogic.calculate_score((1,))
     expected = 100
     assert actual == expected
 
-@pytest.mark.skip('Pending')
+# @pytest.mark.skip('Pending')
 def test_two_fives():
     actual = GameLogic.calculate_score((5, 5))
     expected = 100
     assert actual == expected
 
-@pytest.mark.skip('Pending')
+# @pytest.mark.skip('Pending')
 def test_two_ones():
     actual = GameLogic.calculate_score((1, 1))
     expected = 200
