@@ -1,8 +1,8 @@
-# Project Name
+# Game of Greed
 
-**Author**: Brandon, Clarissa
+**Author**: Brandon Mizutani, Clarissa Pamonicutt
 
-**Version**: 1.0.0
+**Version**: 1.1.0
 <!-- (increment the patch/fix version number if you make more commits past your first submission) -->
 
 ## Overview
@@ -53,22 +53,23 @@ Python, Poetry,
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-## Estimates
-<!-- See below -->
-Estimate of time needed to complete:
+12-22-21: Began game logic, 12 tests passing
 
-Start time:
-Finish time:
-
-Actual time needed to complete:
+12-23-21: Finished game logic and banker points, all tests passing
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
+Eddie Ponce
+
+Osborn Del Angel
+
+Isaiah Burkes
+
 ### Resource Links
 
-[](https://stackoverflow.com/questions/12229064/mapping-over-values-in-a-python-dictionary)
+[Source](https://stackoverflow.com/questions/12229064/mapping-over-values-in-a-python-dictionary)
 
-[](https://docs.python.org/3/library/collections.html)
+[Source](https://docs.python.org/3/library/collections.html)
 
-[](https://en.wikipedia.org/wiki/Dice_10000)
+[Source](https://en.wikipedia.org/wiki/Dice_10000)
