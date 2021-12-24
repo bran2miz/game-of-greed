@@ -27,43 +27,43 @@ def test_two_ones():
     expected = 200
     assert actual == expected
 
-@pytest.mark.skip('Pending')
+# @pytest.mark.skip('Pending')
 def test_one_and_five():
     actual = GameLogic.calculate_score((1, 5))
     expected = 150
     assert actual == expected
 
-@pytest.mark.skip('Pending')
+# @pytest.mark.skip('Pending')
 def test_zilch():
     actual = GameLogic.calculate_score((2,))
     expected = 0
     assert actual == expected
 
-@pytest.mark.skip('Pending')
+# @pytest.mark.skip('Pending')
 def test_three_fives():
     actual = GameLogic.calculate_score((5, 5, 5, 2, 2, 3))
     expected = 500
     assert actual == expected
 
-@pytest.mark.skip('Pending')
+# @pytest.mark.skip('Pending')
 def test_three_ones():
     actual = GameLogic.calculate_score((1, 1, 1, 2, 3, 4))
     expected = 1000
     assert actual == expected
 
-@pytest.mark.skip('Pending')
+# @pytest.mark.skip('Pending')
 def test_three_ones_and_a_five():
     actual = GameLogic.calculate_score((1, 1, 1, 5))
     expected = 1050
     assert actual == expected
 
-@pytest.mark.skip('Pending')
+# @pytest.mark.skip('Pending')
 def test_straight():
     actual = GameLogic.calculate_score((1, 6, 3, 2, 5, 4))
     expected = 1500
     assert actual == expected
 
-@pytest.mark.skip('Pending')
+# @pytest.mark.skip('Pending')
 def test_three_of_a_kind():
     actual = GameLogic.calculate_score((2, 2, 2))
     expected = 200
@@ -94,7 +94,8 @@ def test_six_ones():
     assert actual == expected
 
 
-@pytest.mark.parametrize(
+# @pytest.mark.parametrize
+(
     "test_input,expected",
     [
         (tuple(), 0),

@@ -54,17 +54,34 @@ class GameLogic:
       dice_number = Counter(roll_dice)
       print(dice_number)
       tally_score = 0
+      length_of_counter = len(dice_number)
 
-      # for i in game_start(1,7):
-      #   if i == 1:
-      #     tally_score += 50
       if dice_number[5] == 1 or dice_number[5]== 2:
         tally_score += 50 * dice_number[5]
       
       if dice_number[1] == 1 or dice_number[1] == 2:
         tally_score += 100 * dice_number[1]
 
+      # Write a function that checks for three of a kind
+
+      for i in range(1,6):
+        if i == 1 and dice_number[1] == 3:
+          tally_score += 1000
+        elif i != 1 and dice_number[i] == 3:
+          tally_score += i * 100
+      
+      #Write a function that checks for a straight (1,2,3,4,5,6)
+
+      for i in range(1,6):
+        if length_of_counter == 6 and dice_number[i] == 1:
+          tally_score = 1500
+
+
+
       return tally_score
+
+
+      
 
       
 
