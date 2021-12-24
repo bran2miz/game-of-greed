@@ -111,16 +111,27 @@ class GameLogic:
 
 
     # Write a function that checks for 2 pairs of 3
+    # create a separate "tally score"
+      tally_three_pair = 0
 
+      for i in range(1,7):
+        # if length_of_counter == 3 and dice_number[i] == 2:
+        #   tally_score = 1500
+        if dice_number[i] == 2:
+          tally_three_pair += 1
+        if tally_three_pair == 3:
+          tally_score = 1500
 
 
 
       return tally_score
 
 
-      
+
+
 
       
+# Handles dice roll
 
     @staticmethod
     def roll_dice(rolled_dice):
