@@ -2,7 +2,7 @@
 
 **Author**: Brandon Mizutani, Clarissa Pamonicutt
 
-**Version**: 1.1.0
+**Version**: 1.1.0 (PR URL: [PR URL](https://github.com/bran2miz/game-of-greed/pull/4))
 <!-- (increment the patch/fix version number if you make more commits past your first submission) -->
 
 ## Overview
