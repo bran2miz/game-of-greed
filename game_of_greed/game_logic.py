@@ -127,10 +127,7 @@ class GameLogic:
       return tally_score
 
 
-
-
-
-      
+    
 # Handles dice roll
 
     @staticmethod
