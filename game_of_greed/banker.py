@@ -18,6 +18,6 @@ class Banker():
     pass
   # bank instance method - adds any points on the shelf to total and resets shelf to 0
 
-# 
+# clear shelf method to remove un-banked points
   def clear_shelf(self):
     self.shelved = 0
