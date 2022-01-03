@@ -52,29 +52,25 @@ class GameLogic:
     def calculate_score(roll_dice):
       # game_start = ()
       dice_number = Counter(roll_dice)
+      print(dice_number)
       tally_score = 0
       length_of_counter = len(dice_number)
-      # print(f"{length_of_counter}")
 
     # Functions for 
     
       if dice_number[5] == 1 or dice_number[5]== 2:
         tally_score += 50 * dice_number[5]
-        # print('adding 50')
       
       if dice_number[1] == 1 or dice_number[1] == 2:
         tally_score += 100 * dice_number[1]
-        # print('adding 100')
 
     # Write a function that checks for three of a kind
 
       for i in range(1,7):
         if i == 1 and dice_number[1] == 3:
           tally_score += 1000
-          # print('adding 1000')
         elif i != 1 and dice_number[i] == 3:
           tally_score += i * 100
-          # print('adding 100')
 
     # Write a function that checks four of a kind
     # 1s = 2000, 2s = 400, 3s = 600, 4s = 800, 5s =1000, 6s = 1200
@@ -82,10 +78,8 @@ class GameLogic:
       for i in range(1,7):
         if i == 1 and dice_number[1] == 4:
           tally_score += 2000
-          # print('adding 2000')
         elif i != 1 and dice_number[i] == 4:
           tally_score += i * 200
-          # print('addding 200')
 
     # Write a function that checks five of a kind
     # 1s = 3000, 2s = 600, 3s = 900, 4s = 1200, 5s =1500, 6s = 1800
@@ -93,10 +87,8 @@ class GameLogic:
       for i in range(1,7):
         if i == 1 and dice_number[1] == 5:
           tally_score += 3000
-          # print('adding 3000')
         elif i != 1 and dice_number[i] == 5:
           tally_score += i * 300
-          # print('adding 300')
 
     # Write a function that checks six of a kind
     # 1s = 4000, 2s = 800, 3s = 1200, 4s = 1600, 5s =2000, 6s = 2400
@@ -104,17 +96,14 @@ class GameLogic:
       for i in range(1,7):
         if i == 1 and dice_number[1] == 6:
           tally_score += 4000
-          # print('adding 4000')
         elif i != 1 and dice_number[i] == 6:
           tally_score += i * 400
-          # print('adding 400')
          
     #Write a function that checks for a straight (1,2,3,4,5,6)
 
       for i in range(1,7):
         if length_of_counter == 6 and dice_number[i] == 1:
           tally_score = 1500
-          # print('score 1500')
 
     # Write a function that checks for 3 pairs of 2
 
@@ -130,9 +119,9 @@ class GameLogic:
           tally_three_pair += 1
         if tally_three_pair == 3:
           tally_score = 1500
-          # print('score 1500')
 
-      # print(f"{tally_score}")
+
+
       return tally_score
 
 
