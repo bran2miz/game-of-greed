@@ -2,7 +2,7 @@
 name = "game-of-greed"
 version = "0.1.0"
 description = ""
-authors = ["brandonmizutani <bran2miz@gmail.com>"]
+authors = ["brandon-mizutani <bran2miz@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"

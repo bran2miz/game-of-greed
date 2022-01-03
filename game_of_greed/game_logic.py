@@ -108,8 +108,6 @@ class GameLogic:
     # Write a function that checks for 3 pairs of 2
 
 
-
-
     # Write a function that checks for 2 pairs of 3
     # create a separate "tally score"
       tally_three_pair = 0
