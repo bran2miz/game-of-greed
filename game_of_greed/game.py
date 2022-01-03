@@ -26,54 +26,58 @@ class Game:
 
   def round_start(self):
     while self.status and self.banker.balance <= 10000:
-      dice_quantity = 6    
       while self.status:
         print(f"Starting round {self.number_of_rounds}")
         print(f"Rolling {self.dice_quantity} dice...")
-        dice_string = ' '.join(str(num) for num in (self.roll_dice(dice_quantity)))
+# need to save the result from self.roll_dice to use in gamelogic.calulate_score
+# dicerolled is the result of rolling the dice, used in dice_string and get_score
+        dicerolled = self.roll_dice(self.dice_quantity)
+        dice_string = ' '.join(str(num) for num in dicerolled)
         print(f"*** {dice_string} ***")
         print(f"Enter dice to keep, or (q)uit:")
+        
         game_input = input("> ")
-# ** 1 1 4 1 3 2 **
-# 1 1 1 2
+      # quitting
         if game_input == "q":
           print(f"Thanks for playing. You earned {self.banker.balance} points")
           self.status = False
+        
+      # continuing the game
         else:
-          get_score = GameLogic.calculate_score(game_input)
+          # print('test line 1')
+          get_score = GameLogic.calculate_score(dicerolled)
+          # print('test line 2')
           self.banker.shelf(get_score)
-          print(f"You have {self.banker.shelf} un banked points and {dice_quantity} dice remaining")
+# calculating dice quantity after user selects their dice
+          self.dice_quantity -= len(game_input)
+          print(f"You have {get_score} unbanked points and {self.dice_quantity} dice remaining")
           print("(r)oll again, (b)ank your points or (q)uit:")
           
+      # rolling again
           roll_again = input("> ")
           if roll_again == "r":
-            print(f"Rolling {self.dice_quantity} dice...")
+            self.number_of_rounds += 1
+            # print(f"Rolling {self.dice_quantity} dice...")
             continue
+
+      # banking the points
           if roll_again == "b":
             self.banker.bank()
             print(f"You banked {get_score} points in round {self.number_of_rounds}")
-            self.number_of_rounds += 1
             self.banker.clear_shelf()
+            self.number_of_rounds += 1
             break
+
           if roll_again == "q":
-            pass
+            break
 
-     
-# You banked 50 points in round 1
-# Total score is 50 points
-     
-# Banked points
-# (r)oll again, (b)ank your points or (q)uit:
-# user input
-# total score
-# start round 2
-# Rolling {self.dice_quantity} dice...
-# shows dice 
-# Enter dice to keep, or (q)uit:
-# user input
-# Thanks for playing. You earned {}} points
+#   Fixed - 
+# number of dice to keep is entered and points are not saved or displayed
+# need to make dice quantity calculate after user selection
+# round restarts after pressing q the first time
+# when banking points, round is increased to round 2 before round 1 is over
 
-
+# Ask TA about how tests are picking dice. Terminal is only slightly off now.
 
 
   # def rolling(self, roller):
