@@ -39,8 +39,9 @@ class Game:
         else:
           get_score = GameLogic.calculate_score(game_input)
           self.banker.shelf(get_score)
-          print(f"You have {self.banker.shelf} unbanked points and {dice_quantity} dice remaining")
+          print(f"You have {self.banker.shelf} un banked points and {dice_quantity} dice remaining")
           print("(r)oll again, (b)ank your points or (q)uit:")
+          
           roll_again = input("> ")
           if roll_again == "r":
             print(f"Rolling {self.dice_quantity} dice...")

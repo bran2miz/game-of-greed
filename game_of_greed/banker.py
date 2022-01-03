@@ -11,6 +11,7 @@ class Banker():
 
   def shelf(self, points):
     self.shelved +=points
+      
   
   def bank(self):
     self.balance = self.shelved
