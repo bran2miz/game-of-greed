@@ -32,8 +32,8 @@ class Game:
         dice_string = ' '.join(str(num) for num in dicerolled)
         print(f"*** {dice_string} ***")
         print(f"Enter dice to keep, or (q)uit:")
-        game_input = input("> ")
         
+        game_input = input("> ")
       # quitting
         if game_input == "q":
           print(f"Thanks for playing. You earned {self.banker.balance} points")
