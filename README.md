@@ -13,6 +13,8 @@ We are building a dice game based on the game, "Farkle", in order to expand our 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
+### Lab 06
+
 **Define a GameLogic class in game_of_greed/game_logic.py file.**
 
 **Handle calculating score for dice roll**:
@@ -43,6 +45,22 @@ We are building a dice game based on the game, "Farkle", in order to expand our 
 - Add a clear_shelf instance method
   - clear_shelf should remove all unbanked points.
 
+---
+
+### Lab 07
+
+- Application should implement all features from previous version
+- Application should simulate rolling between 1 and 6 dice
+- Application should allow user to set aside dice each roll
+- Application should allow “banking” current score or rolling again.
+- Application should keep track of total score
+- Application should keep track of current round
+- Application should have automated tests to ensure proper operation
+
+- Starter code contains acceptance tests in the form of “simulation” files.
+  - E.g. `tests/version_1/quitter.sim.txt`
+- These simulation files are used in concert with `tests/flo.py` to examine actual vs. expected output.
+
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 Python, Poetry,
@@ -56,6 +74,8 @@ Python, Poetry,
 12-22-21: Began game logic, 12 tests passing
 
 12-23-21: Finished game logic and banker points, all tests passing
+
+12-30-21: 69 Tests passing
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
