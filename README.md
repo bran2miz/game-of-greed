@@ -2,7 +2,7 @@
 
 **Author**: Brandon Mizutani, Clarissa Pamonicutt
 
-**Version**: 1.1.0 (PR URL: [PR URL](https://github.com/bran2miz/game-of-greed/pull/4))
+**Version**: 1.1.0 (PR URL: [PR URL](https://github.com/bran2miz/game-of-greed/pull/15))
 <!-- (increment the patch/fix version number if you make more commits past your first submission) -->
 
 ## Overview
@@ -77,12 +77,16 @@ Python, Poetry,
 
 12-30-21: 69 Tests passing
 
+12-03-21: 71 Tests passing, lab complete
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
 Eddie Ponce
 
 Osborn Del Angel
+
+Alex Payne
 
 Isaiah Burkes
 
@@ -93,3 +97,5 @@ Isaiah Burkes
 [Source](https://docs.python.org/3/library/collections.html)
 
 [Source](https://en.wikipedia.org/wiki/Dice_10000)
+
+[Source](https://www.geeksforgeeks.org/python-exit-commands-quit-exit-sys-exit-and-os-_exit/)
