@@ -37,22 +37,18 @@ class Game:
 # need to save the result from self.roll_dice to use in gamelogic.calulate_score
 # dicerolled is the result of rolling the dice, used in dice_string and get_score
       dicerolled = roller(self.dice_quantity)
-      dice_string = ''
-      for num in dicerolled:
-        dice_string += str(num) + " "
+      # dice_string = str(dicerolled).strip("([])").replace(", ", " ")
+      # dice_string = ''
+      # for num in dicerolled:
+      #   dice_string += str(num) + " "
       dice_string = ' '.join(str(num) for num in dicerolled)
-      print(f"*** {dice_string}***")
-
-
-      # if GameLogic.calculate_score(dicerolled) == 0:
-      #   print("Farkled")
-      #   continue
-
-      print(f"Enter dice to keep, or (q)uit:")  
-      game_input = input("> ")
+      print(f"*** {dice_string} ***")
+      print(f"Enter dice to keep, or (q)uit:")
+ 
+      game_input = input("> " )
       # quitting
       if game_input == "q":
-        print(f"Thanks for playing. You earned {self.banker.balance} points")
+        print(f'Thanks for playing. You earned {self.banker.balance} points')
         # self.status = False
         sys.exit()
         
@@ -60,7 +56,7 @@ class Game:
       else:
         user_entry = tuple(map(int, list(game_input)))
           # print('test line 1')
-        self.dice_quantity -= len(game_input)
+        self.dice_quantity -= len(user_entry)
         get_score = GameLogic.calculate_score(user_entry)
           # print('test line 2')
         self.banker.shelf(get_score)
@@ -70,17 +66,9 @@ class Game:
         print("(r)oll again, (b)ank your points or (q)uit:")
           
       # rolling again
-        roll_again = input("> ")
-
-        if roll_again == "r":
-          # self.number_of_rounds += 1
-          # if self.dice_quantity == 0:
-          #   self.dice_quantity = 6
-            # print(f"Rolling {self.dice_quantity} dice...")
-          continue
-
+        game_input = input("> ")
       # banking the points
-        elif roll_again == "b":
+        if game_input == "b":
           self.banker.bank()
           self.dice_quantity = 6
           print(f"You banked {get_score} points in round {self.number_of_rounds}")
@@ -89,7 +77,17 @@ class Game:
           # self.number_of_rounds += 1
           # break
 
-        elif roll_again == "q":
+
+        elif game_input == "r":
+          # self.number_of_rounds += 1
+          if self.dice_quantity == 0:
+            self.dice_quantity = 6
+            # print(f"Rolling {self.dice_quantity} dice...")
+          continue
+
+      
+
+        elif game_input == "q":
           print(f"Thanks for playing. You earned {self.banker.balance} points")
           sys.exit()
 
