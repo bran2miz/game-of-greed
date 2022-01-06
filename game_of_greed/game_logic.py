@@ -134,14 +134,23 @@ class GameLogic:
 
       # print(f"{tally_score}")
       return tally_score
-
-
-    
-# Handles dice roll
-
+    #handles dice roll  
     @staticmethod
     def roll_dice(rolled_dice):
         dice_list = []
         for _ in range(rolled_dice):
             dice_list.append(random.randint(1,6))
         return tuple(dice_list)
+
+    # @staticmethod
+    # def get_scorers():
+    
+
+    # @staticmethod
+    # def validate_keepers(self, keeper, roller):
+
+    
+# legal_keepers
+# illegal_keepers
+# illegal_overflow 
+
