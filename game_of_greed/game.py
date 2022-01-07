@@ -24,6 +24,7 @@ class Game:
     # While True:
     if player_input == 'n':
       print('OK. Maybe another time')
+      sys.exit()
     elif player_input == 'y':
       # self.dice_quantity = 6
       self.round_start(roller)
@@ -58,7 +59,27 @@ class Game:
         **        Zilch!!! Round over         **
         ****************************************
         ''')
-      self.banker.clear_shelf()
+      self.banker.clear_shelf(roller)
+    else:
+      print(f"Enter dice to keep, or (q)uit:")
+      game_input = input("> ")
+      if game_input == "q":
+        print(f"Thanks for playing. You earned {self.banker.balance} points")
+        sys.exit()
+      else:
+        user_entry = tuple(map(int, list(game_input)))
+          # print('test line 1')
+        validate_score = GameLogic.validate_keepers(rolled_dice, user_entry)
+        if validate_score == True:
+          return validate_score
+        else:
+          print("Cheater!!! Or possibly made a typo...")
+          print(f"*** {self.dice_string} ***")
+          return self.dice_validator(rolled_dice, roller)
+        # self.dice_quantity -= len(user_entry)
+        # get_score = GameLogic.calculate_score(user_entry)
+        #   # print('test line 2')
+        # self.banker.shelf(get_score)
 
   def calculate_score(self, user_entry):
     get_score = GameLogic.calculate_score(user_entry)
