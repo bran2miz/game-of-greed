@@ -24,6 +24,7 @@ class Game:
       player_input = input("> ")
       if player_input == 'n':
         print('OK. Maybe another time')
+        sys.exit()
       elif player_input == 'y':
         # self.dice_quantity = 6
         self.round_start(roller)
