@@ -2,7 +2,7 @@
 
 **Author**: Brandon Mizutani, Clarissa Pamonicutt
 
-**Version**: 1.1.0 (PR URL: [PR URL](https://github.com/bran2miz/game-of-greed/pull/15))
+**Version**: 1.3.0 (PR URL: [PR URL](https://github.com/bran2miz/game-of-greed/pull/15))
 <!-- (increment the patch/fix version number if you make more commits past your first submission) -->
 
 ## Overview
@@ -61,6 +61,21 @@ We are building a dice game based on the game, "Farkle", in order to expand our 
   - E.g. `tests/version_1/quitter.sim.txt`
 - These simulation files are used in concert with `tests/flo.py` to examine actual vs. expected output.
 
+---
+
+### Lab 08
+
+- Application should implement features from versions 1 and 2
+- Should handle setting aside scoring dice and continuing turn with remaining dice.
+- Should handle when cheating occurs.
+  - Or just typos.
+  - E.g. roll = [1,3,5,2] and user selects 1, 1, 1, 1, 1, 1
+- Should allow user to continue rolling with 6 new dice when all dice have scored in current turn.
+- Handle zilch
+  - No points for round, and round is over
+
+---
+
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 Python, Poetry,
@@ -79,6 +94,8 @@ Python, Poetry,
 
 12-03-21: 71 Tests passing, lab complete
 
+01-08-22: 78 Tests passed
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
@@ -90,6 +107,8 @@ Alex Payne
 
 Isaiah Burkes
 
+Referenced Roger Huba Lab 09 code for Lab 08
+
 ### Resource Links
 
 [Source](https://stackoverflow.com/questions/12229064/mapping-over-values-in-a-python-dictionary)
@@ -99,3 +118,7 @@ Isaiah Burkes
 [Source](https://en.wikipedia.org/wiki/Dice_10000)
 
 [Source](https://www.geeksforgeeks.org/python-exit-commands-quit-exit-sys-exit-and-os-_exit/)
+
+[Roger Huba game.py](https://github.com/codefellows/seattle-code-python-401n4/blob/main/class-9/game-of-greed/game_of_greed/game.py)
+
+[Roger Huba Game Logic](https://github.com/codefellows/seattle-code-python-401n4/blob/main/class-9/game-of-greed/game_of_greed/game_logic.py)
