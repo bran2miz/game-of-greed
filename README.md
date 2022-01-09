@@ -2,7 +2,11 @@
 
 **Author**: Brandon Mizutani, Clarissa Pamonicutt
 
-**Version**: 1.1.0 (PR URL: [PR URL](https://github.com/bran2miz/game-of-greed/pull/15))
+**Version**: 1.3.0 (PR URL: [PR URL](https://github.com/bran2miz/game-of-greed/pull/15))
+
+[Lab08 PR URL](https://github.com/bran2miz/game-of-greed/pull/20)
+
+[Lab09 PR URL](https://github.com/bran2miz/game-of-greed/pull/19)
 <!-- (increment the patch/fix version number if you make more commits past your first submission) -->
 
 ## Overview
@@ -61,6 +65,40 @@ We are building a dice game based on the game, "Farkle", in order to expand our 
   - E.g. `tests/version_1/quitter.sim.txt`
 - These simulation files are used in concert with `tests/flo.py` to examine actual vs. expected output.
 
+---
+
+### Lab 08
+
+- Application should implement features from versions 1 and 2
+- Should handle setting aside scoring dice and continuing turn with remaining dice.
+- Should handle when cheating occurs.
+  - Or just typos.
+  - E.g. roll = [1,3,5,2] and user selects 1, 1, 1, 1, 1, 1
+- Should allow user to continue rolling with 6 new dice when all dice have scored in current turn.
+- Handle zilch
+  - No points for round, and round is over
+
+---
+
+### Lab 09
+
+- Create an AI Bot to play Game of Greed
+  - The only method available for use from Game class is play.
+  - All static methods of GameLogic class are available.
+  - All other interactions with game can take place ONLY via the I/O features of the game.
+    - In other words, via injectable print and input functionality.
+    - It is FORBIDDEN to inject a custom roller function into Game class.
+- Copy bots.py to your project.
+  - Place it at root of project, at same level as pyproject.toml
+- Your Bot class should be added to bots.py file with name of your choosing replacing YourBot.
+  - NOTE the code for BaseBot class is supplied for reference, but your custom code will be in the overridden _roll_bank_or_quit and _enter_dice methods.
+- User should be able to see your bot play by executing bots.py from terminal.
+- Application should implement features from previous classes
+
+The goal is to beat Nervous Nellie - A reference bot that banks on the first roll every time.
+
+---
+
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 Python, Poetry,
@@ -79,6 +117,8 @@ Python, Poetry,
 
 12-03-21: 71 Tests passing, lab complete
 
+01-08-22: 78 Tests passed
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
@@ -90,6 +130,8 @@ Alex Payne
 
 Isaiah Burkes
 
+Referenced Roger Huba Lab 09 code for Lab 08
+
 ### Resource Links
 
 [Source](https://stackoverflow.com/questions/12229064/mapping-over-values-in-a-python-dictionary)
@@ -99,3 +141,7 @@ Isaiah Burkes
 [Source](https://en.wikipedia.org/wiki/Dice_10000)
 
 [Source](https://www.geeksforgeeks.org/python-exit-commands-quit-exit-sys-exit-and-os-_exit/)
+
+[Roger Huba game.py](https://github.com/codefellows/seattle-code-python-401n4/blob/main/class-9/game-of-greed/game_of_greed/game.py)
+
+[Roger Huba Game Logic](https://github.com/codefellows/seattle-code-python-401n4/blob/main/class-9/game-of-greed/game_of_greed/game_logic.py)
